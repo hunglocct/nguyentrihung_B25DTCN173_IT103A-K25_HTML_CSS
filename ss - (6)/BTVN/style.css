@@ -1,0 +1,66 @@
+.hqq {
+    text-align: center;
+    background-color: aquamarine;
+    color: rgb(68, 132, 109);
+
+}
+.ttl{
+text-align: center;
+background-color: rgb(215, 255, 255);
+
+}
+.ttl a {
+    gap: inherit;
+text-decoration: none;
+font-weight: bold;
+}
+.go h2{
+    color: #16868e;
+}
+.go{
+    background-color: rgb(255, 255, 255);
+}
+.go li:hover{
+    background-color: aquamarine;
+    color: blueviolet;
+}
+.ttl a:hover{
+    background-color: #16868e;
+    color: #ffffff;
+}
+.table tr:hover{
+background-color: rgb(158, 210, 255);
+
+}
+.table th{
+    background-color: aquamarine;
+    color: #16868e;
+}
+.table {
+    background-color: #ffffff;
+}
+.fon {
+    text-align: center;
+}
+.fon input:focus {
+    background-color: rgb(186, 223, 255);
+}
+.fon select:focus{
+    background-color: rgb(135, 199, 255);
+}
+.fon textarea:focus {
+    background-color: rgb(170, 214, 252);
+}
+.fon label{
+    color: rgb(22, 133, 96);
+    font-weight: bold;
+}
+.fon button{
+    font-weight: bold;
+    color: #57306d;
+    background-color:aquamarine; width: 10%; height: 5%;"
+}
+.fon button:hover{
+    background-color: #16868e;
+    color: #ffffff;
+}
