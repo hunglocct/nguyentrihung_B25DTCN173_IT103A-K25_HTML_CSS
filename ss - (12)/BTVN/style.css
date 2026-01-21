@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+.bai1 .header{
+    width: 1920px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: rgb(229, 229, 190);
+
+}
+.bai1 h1{
+    font-size: font size/20;
+    font-weight: 700;
+   
+}
+
+.bai1 p{
+    color: black;
+
+}
+.bai1 button{
+    width: 40px ; 
+    height: 10px;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+}
