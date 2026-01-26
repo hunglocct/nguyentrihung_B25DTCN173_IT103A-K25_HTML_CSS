@@ -1,0 +1,83 @@
+*{
+ margin: 0%;
+ padding: 0%;
+ box-sizing : border-box;
+ font-family: Arial, Helvetica, sans-serif;
+transition: all 0.3s;
+}
+body{
+    background-color: #e8e8e8;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+}
+header span{
+    color: #49BBBD;
+    font-weight: bold;
+    padding: 10px;
+    padding-top: 20px;
+    font-size: 25px;
+}
+.ss1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.box{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 375px;
+    height: 617px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.285);
+}
+.box img {
+    margin: 0px;
+    transform: translateX(-4px);
+    border-radius: 15px;
+}
+.image{
+    width: 355px;
+    height: 239px;
+}
+.not {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.not div{
+    padding: 10px;
+}
+.box h2{
+    padding-left: 10px;
+}
+.box p{
+    padding: 10px;
+    color: #696984;
+    font-size: 20px;
+}
+.note {
+    display: flex;
+    justify-content: space-between;
+}
+.tt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+del {
+    color: #00000080;
+}
+.tt span {
+    color: #49BBBD;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px;
+}
