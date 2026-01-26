@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-size: 16px;
+        font-family: sans-serif;
+      }
+      .navlink {
+        color: #1f2937;
+        font-weight: 500;
+        font-size: 16px;
+      }
+      .btn {
+        border-color: #6366f1;
+        color: #6366f1;
+        font-size: 16px;
+        font-weight: 700;
+        transition: all 0.4s;
+      }
+      .btn:hover {
+        background-color: #6366f1;
+        color: #fff;
+        transform: translateY(-7px);
+      }
+      header {
+        box-shadow: 0px 1px 2px 0px #0000000d;
+      }
+      .path {
+        color: #6b7280;
+        font-weight: 400;
+        font-size: 16px;
+      }
+      .path::after {
+        content: " > ";
+      }
+      .path-active {
+        color: #1f2937;
+        font-weight: 500;
+        font-size: 16px;
+      }
+      .tag {
+        background: #ffffff26;
+        padding: 9px 12px;
+        border-radius: 6px;
+        color: #fff;
+        text-decoration: none;
+      }
+      .icon li::before {
+        content: "✓  ";
+        color: #16a34a;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .logo {
+    width: 114px;
+    height: 40px;
+    justify-content: center;
+}
+
+.logo img {
+    display: flex;
+    width: 114px;
+    height: 40px;
+    justify-content: center;
+}
+.disrow {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.discol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+      
+footer {
+    background-color: #1F2937;
+    color: #9CA3AF;
+    display: flex;
+    flex-direction: column;
+}
+
+footer h3 {
+    color: white;
+    font-size: 15px;
+}
+
+.fo {
+    justify-content: center;
+    gap: 5%;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    flex-wrap: wrap;
+}
+
+.fo div {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+lk p {
+    display: flex;
+    width: 30px;
+}
+
+.box:hover,
+.boc:hover,
+button:hover,
+a:hover,
+.bo div:hover,
+.bl:hover {
+    transform: translateY(-6px) scale(1.02);
+}
+
+@media (max-width: 1024px) {
+    .ban {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .ttl p {}
+
+    .ttl {
+        padding-bottom: 20px;
+    }
+
+    .ban h1 {
+        font-size: 40px;
+    }
+
+    .ban p {
+        max-width: 100%;
+    }
+
+    .blo {
+        width: 95%;
+    }
+
+    .bl {
+        width: 100%;
+    }
+
+    .bo div {
+        width: 50%;
+    }
+
+    .mol {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .boc {
+        width: 220px;
+        height: 650px;
+    }
+
+    .dk {
+        width: 100px;
+
+    }
+
+    .dk button {
+        width: 70px;
+        height: 70px;
+    }
+
+    .fo {
+        justify-content: space-evenly;
+
+    }
+
+    .fo div {}
+}
+    </style>
+  </head>
+  <body>
+    <div>
+      <header class="w-100 pt-3 pb-3">
+        <div
+          class="d-flex justify-content-between align-items-center container"
+        >
+          <div><img src="./images/Rikkei Education Logo (1).png" alt="" /></div>
+          <nav class="d-flex gap-4 align-items-center">
+            <a class="text-decoration-none navlink" href="">Trang chủ</a>
+            <a class="text-decoration-none navlink" href="">Khóa học</a>
+            <a class="text-decoration-none navlink" href="">Giới thiệu</a>
+            <a class="text-decoration-none navlink" href="">Liên hệ</a>
+          </nav>
+          <div class="d-flex gap-2">
+            <button class="btn border">Đăng nhập</button>
+            <button class="btn border">Đăng ký</button>
+          </div>
+        </div>
+      </header>
+      <div style="border-bottom: 1px solid #e5e7eb" class="w-100 pt-3 pb-3">
+        <div class="container">
+          <a class="text-decoration-none path" href="">Trang chủ</a>
+          <a class="text-decoration-none path" href="">Khóa học</a>
+          <a class="text-decoration-none path-active" href="">Lập trình Web</a>
+        </div>
+      </div>
+
+      <div style="background: #1f2937; padding-bottom: 0px">
+        <div class="d-flex flex-row container pt-5">
+          <div>
+            <div class="pb-3">
+              <a class="tag">Lập trình</a>
+            </div>
+            <h1
+              style="
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 48px;
+                color: #fff;
+                padding-bottom: 10px;
+              "
+            >
+              Lập Trình Web Từ Cơ Bản Đến Nâng Cao
+            </h1>
+            <p
+              style="
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28.8px;
+                color: #ffffffe5;
+                max-width: 70%;
+              "
+            >
+              Học HTML, CSS, JavaScript và các framework hiện đại để trở thành
+              Web Developer chuyên nghiệp
+            </p>
+            <div
+              class="d-flex justify-content-between align-items-center border-bottom"
+              style="
+                color: #fff;
+                border-color: #ffffff33 !important;
+                max-width: 90%;
+              "
+            >
+              <div>
+                <p>⭐ 4.9 (2,345 đánh giá)</p>
+              </div>
+              <div>
+                <p>12,567 học viên</p>
+              </div>
+              <div>
+                <p>📅 Cập nhật: Tháng 12/2025</p>
+              </div>
+              <div>
+                <p>🌐 Tiếng Việt</p>
+              </div>
+            </div>
+
+            <div class="pt-5 d-flex align-items-center gap-3">
+              <div class="">
+                <img
+                  class="rounded-circle"
+                  src="./images/9bbdfb06a5eae3ca01387e38cee556cb0ba93eb3 (1).jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <p class="mb-0" style="color: #ffffffb2">Giảng viên</p>
+                <p class="m-0" style="color: #ffffff">Nguyễn Văn A</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="d-flex flex-column"
+            style="background-color: #fff; width: 400px; border-radius: 12px"
+          >
+            <div>
+              <img
+                class=""
+                style="border-radius: 10px 10px 0 0"
+                src="./images/Container.png"
+                alt=""
+              />
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <p
+                    class="m-0"
+                    style="
+                      font-weight: 700;
+                      font-size: 31.5px;
+                      line-height: 51.2px;
+                      color: #1f2937;
+                    "
+                  >
+                    1,999,000đ
+                  </p>
+                  <p
+                    style="
+                      font-weight: 400;
+                      font-size: 16px;
+                      line-height: 25.6px;
+                      color: #6b7280;
+                      text-decoration: line-through;
+                    "
+                  >
+                    2,999,000đ
+                  </p>
+                </div>
+                <div
+                  style="
+                    border-radius: 6px;
+                    background-color: #dcfce7;
+                    color: #166534;
+                    padding: 9px 12px;
+                  "
+                >
+                  <p class="m-0">Giảm 33%</p>
+                </div>
+              </div>
+              <div
+                style="
+                  background-color: #fef3c7;
+                  color: #ffffff;
+                  border-radius: 6px;
+                  padding: 20px 0;
+                  margin-bottom: 24px;
+                "
+              >
+                <p
+                  class="m-0"
+                  style="font-weight: 400; font-size: 14px; line-height: 22.4px"
+                >
+                  ⏰ Ưu đãi kết thúc sau 2 ngày
+                </p>
+              </div>
+              <button class="w-100 btn mb-4 p-3">Đăng ký ngay</button>
+              <button class="w-100 btn mb-5 p-3">Thêm vào giỏ hàng</button>
+
+              <div style="border-top: 1px solid #e5e7eb">
+                <p class="pt-4">
+                  <b> Khóa học bao gồm: </b>
+                </p>
+                <ul
+                  style="
+                    list-style: none;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                    padding-left: 0;
+                  "
+                >
+                  <li>🎥 40 giờ video học</li>
+                  <li>📄 25 bài tập thực hành</li>
+                  <li>📱 Truy cập trên mọi thiết bị</li>
+                  <li>♾️ Truy cập trọn đời</li>
+                  <li>📜 Chứng chỉ hoàn thành</li>
+                  <li>💬 Hỗ trợ 24/7</li>
+                </ul>
+              </div>
+              <div
+                class="text-center"
+                style="
+                  background-color: #f9fafb;
+                  border-radius: 6px;
+                  color: #1f2937;
+                  padding: 19px 0;
+                  margin-top: 30px;
+                "
+              >
+                <p>✓ Hoàn tiền 100% trong 30 ngày</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main style="background-color: #f9fafb">
+        <div class="d-flex justify-content-center container m-5">
+          <div style="flex: 3">
+            <div
+              class="p-5"
+              style="
+                box-shadow: 0px 1px 2px 0px #0000000d;
+                border-radius: 12px;
+                background-color: #fff;
+              "
+            >
+              <div>
+                <h3
+                  style="font-weight: 700; font-size: 28px; line-height: 44.8px"
+                >
+                  Bạn sẽ học được gì
+                </h3>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <ul
+                    class="icon p-0"
+                    style="
+                      list-style: none;
+                      display: flex;
+                      gap: 32px;
+                      flex-direction: column;
+                    "
+                  >
+                    <li>
+                      Nắm vững HTML5 và CSS3 để xây dựng giao diện web hiện đại
+                    </li>
+                    <li>
+                      Sử dụng thành thạo React.js để xây dựng ứng dụng web
+                    </li>
+                    <li>Làm việc với API và xử lý dữ liệu</li>
+                    <li>Xây dựng 5+ dự án thực tế để bổ sung portfolio</li>
+                  </ul>
+                </div>
+                <div>
+                  <ul
+                    class="icon p-0"
+                    style="
+                      list-style: none;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 32px;
+                    "
+                  >
+                    <li>Lập trình JavaScript từ cơ bản đến nâng cao</li>
+                    <li>Thiết kế responsive cho mọi thiết bị</li>
+                    <li>Triển khai website lên hosting và domain</li>
+                    <li>Áp dụng best practices và coding standards</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="p-5"
+              style="
+                box-shadow: 0px 1px 2px 0px #0000000d;
+                border-radius: 12px;
+                background-color: #fff;
+                margin-top: 32px;
+              "
+            >
+              <h2
+                style="font-weight: 700; font-size: 28px; line-height: 44.8px"
+                class="mb-4"
+              >
+                Mô tả khóa học
+              </h2>
+              <p style="font-weight: 400; font-size: 16px; line-height: 27.2px">
+                Chào mừng bạn đến với khóa học
+                <b>Lập Trình Web Từ Cơ Bản Đến Nâng Cao</b> - khóa học toàn diện
+                nhất về phát triển web tại Rikkei Education!
+              </p>
+              <p style="font-weight: 400; font-size: 16px; line-height: 27.2px">
+                Khóa học này được thiết kế dành cho những người mới bắt đầu muốn
+                trở thành Web Developer chuyên nghiệp. Bạn sẽ được học từ những
+                kiến thức cơ bản nhất về HTML, CSS cho đến các công nghệ hiện
+                đại như React.js, Node.js.
+              </p>
+              <h3
+                class="mt-4"
+                style="font-weight: 700; line-height: 32px; font-size: 20px"
+              >
+                Tại sao nên chọn khóa học này?
+              </h3>
+              <ul>
+                <li>
+                  <p>
+                    <b>Học từ cơ bản:</b> Không cần kiến thức nền tảng, bạn sẽ
+                    được hướng dẫn từng bước một
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <b>Thực hành nhiều:</b> Mỗi bài học đều có bài tập và dự án
+                    thực tế
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <b>Giảng viên kinh nghiệm:</b> Được giảng dạy bởi các chuyên
+                    gia có hơn 10 năm kinh nghiệm
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <b>Cập nhật liên tục:</b> Nội dung được cập nhật theo xu
+                    hướng công nghệ mới nhất
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <b>Hỗ trợ tận tình:</b> Đội ngũ hỗ trợ sẵn sàng giải đáp mọi
+                    thắc mắc 24/7
+                  </p>
+                </li>
+              </ul>
+              <h3
+                class="mt-4"
+                style="font-weight: 700; font-size: 20px; line-height: 32px"
+              >
+                Sau khóa học, bạn có thể:
+              </h3>
+              <ul>
+                <li>Tự tin xây dựng các website hoàn chỉnh từ A-Z</li>
+                <li>Ứng tuyển vào các vị trí Junior/Mid-level Web Developer</li>
+                <li>Freelance và nhận các dự án web development</li>
+                <li>
+                  Tiếp tục học các khóa nâng cao về Full-stack Development
+                </li>
+              </ul>
+              <p>
+                Đăng ký ngay hôm nay để bắt đầu hành trình trở thành Web
+                Developer chuyên nghiệp!
+              </p>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column m-5" style="flex: 2">
+            <div
+              style="
+                border-radius: 12px;
+                box-shadow: 0px 1px 2px 0px #0000000d;
+                background-color: #fff;
+              "
+            >
+              <div>
+                <h4
+                  style="
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 28.8px;
+                    margin-bottom: 32px;
+                  "
+                >
+                  Khóa học liên quan
+                </h4>
+              </div>
+              <div class="d-flex">
+                <div>
+                  <img
+                    style="border-radius: 6px; width: 100px; height: 70px"
+                    src="./images/cfe087a03e0c6a3d6f62eba5db03db410bed970e.jpg"
+                    alt=""
+                  />
+                </div>
+                <div style="border-radius: 8px">
+                  <p
+                    style="
+                      max-width: 125.22000122070312px;
+                      padding-left: 12px;
+                      font-weight: 700;
+                      font-size: 15px;
+                      line-height: 21px;
+                    "
+                  >
+                    UI/UX Design Chuyên Nghiệp
+                  </p>
+                  <div style="transform: translateY(-18px)">
+                    <span
+                      style="
+                        color: #6b7280;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 22.4px;
+                      "
+                      >⭐ 4.8</span
+                    >
+                    <span
+                      style="
+                        color: #6366f1;
+                        font-size: 13.8px;
+                        line-height: 22.4px;
+                        font-weight: 700;
+                      "
+                      >1,699,000đ</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex">
+                <div>
+                  <img
+                    style="border-radius: 6px; width: 100px; height: 70px"
+                    src="./images/b900fb524fb3a38700cb822a83fa12691b6c5d48.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <p
+                    style="
+                      max-width: 125.22000122070312px;
+                      padding-left: 12px;
+                      font-weight: 700;
+                      font-size: 15px;
+                      line-height: 21px;
+                    "
+                  >
+                    Phát Triển Ứng Dụng Di Động
+                  </p>
+                  <div style="transform: translateY(-18px)">
+                    <span
+                      style="
+                        color: #6b7280;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 22.4px;
+                      "
+                      >⭐ 4.7</span
+                    >
+                    <span
+                      style="
+                        color: #6366f1;
+                        font-size: 13.8px;
+                        line-height: 22.4px;
+                        font-weight: 700;
+                      "
+                      >2,299,000đ</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex">
+                <div>
+                  <img
+                    style="border-radius: 6px; width: 100px; height: 70px"
+                    src="./images/b3ec08b817f4dd4134430c68fdfb85a09093e881.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <p
+                    style="
+                      max-width: 150.22000122070312px;
+                      padding-left: 12px;
+                      font-weight: 700;
+                      font-size: 15px;
+                      line-height: 21px;
+                    "
+                  >
+                    Machine Learning Cơ Bản
+                  </p>
+                  <div style="transform: translateY(-18px)">
+                    <span
+                      style="
+                        color: #6b7280;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 22.4px;
+                      "
+                      >⭐ 4.9</span
+                    >
+                    <span
+                      style="
+                        color: #6366f1;
+                        font-size: 13.8px;
+                        line-height: 22.4px;
+                        font-weight: 700;
+                      "
+                      >2,799,000đ</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="d-flex flex-column"
+              style="
+                box-shadow: 0px 1px 2px 0px #0000000d;
+                color: #fff;
+                border-radius: 12px;
+                padding-top: 32px;
+              "
+            >
+              <div class="d-flex flex-column p-3">
+                <div>
+                  <h4
+                    style="
+                      font-weight: 700;
+                      font-size: 18px;
+                      line-height: 28.8px;
+                      color: #1f2937;
+                    "
+                  >
+                    Chia sẻ khóa học
+                  </h4>
+                </div>
+                <div class="d-flex flex-column">
+                  <a
+                    style="
+                      text-decoration: none;
+                      width: 286px;
+                      text-align: center;
+                      height: 57.59000015258789px;
+                      background-color: #1877f2;
+                      color: #fff;
+                      padding-top: 15px;
+                      border-radius: 6px;
+                      margin: 5px;
+                    "
+                    href=""
+                    >Facebook</a
+                  >
+                  <a
+                    style="
+                      text-decoration: none;
+                      width: 286px;
+                      text-align: center;
+                      height: 57.59000015258789px;
+                      background-color: #1da1f2;
+                      color: #fff;
+                      padding-top: 15px;
+                      border-radius: 6px;
+                      margin: 5px;
+                    "
+                    href=""
+                    >Twitter</a
+                  >
+                  <a
+                    style="
+                      text-decoration: none;
+                      width: 286px;
+                      text-align: center;
+                      height: 57.59000015258789px;
+                      background-color: #0a66c2;
+                      color: #fff;
+                      padding-top: 15px;
+                      border-radius: 6px;
+                      margin: 5px;
+                    "
+                    href=""
+                    >LinkedIn</a
+                  >
+                  <a
+                    style="
+                      text-decoration: none;
+                      width: 286px;
+                      text-align: center;
+                      height: 57.59000015258789px;
+                      background-color: #f3f4f6;
+                      color: #1f2937;
+                      padding-top: 15px;
+                      border-radius: 6px;
+                      margin: 5px;
+                    "
+                    href=""
+                    >Sao chép link</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="disrow fo">
+          <div>
+            <div class="logo">
+              <img
+                src="./6668baaf0b5e4e30fafcb89c55d0ea22a22a8e87.png"
+                alt=""
+              />
+            </div>
+            <p>
+              Nền tảng học trực tuyến hàng đầu Việt Nam, mang đến kiến thức chất
+              lượng cho mọi người.
+            </p>
+            <span class="disrow lk">
+              <p>Facebook</p>
+              <p>Facebook</p>
+              <p>Facebook</p>
+              <p>Facebook</p>
+            </span>
+          </div>
+
+          <div>
+            <h3>Khóa học</h3>
+            <p>Lập trình</p>
+            <p>Lập trình</p>
+            <p>Lập trình</p>
+          </div>
+          <div>
+            <h3>Khóa học</h3>
+            <p>Lập trình</p>
+            <p>Lập trình</p>
+            <p>Lập trình</p>
+          </div>
+          <div>
+            <h3>Khóa học</h3>
+            <p>Lập trình</p>
+            <p>Lập trình</p>
+            <p>Lập trình</p>
+          </div>
+        </div>
+        <div style="margin: 30px; margin-left: 20%; margin-right: 20%">
+          <hr />
+        </div>
+
+        <div>
+          <p style="text-align: center; padding: 20px">
+            © 2026 Rikkei Education. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
