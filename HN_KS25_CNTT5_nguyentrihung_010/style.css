@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s;
+}
+
+body {
+    background-color: #FAFAF9;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    padding-top: 20px;
+}
+
+header .head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .header {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    width: 60%;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #375D6C;
+}
+
+header .menu span {
+    display: none;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .banner {
+    height: auto;
+    padding-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.title {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.title p {
+    color: #2D3639;
+    font-size: 18px;
+}
+
+.title h1 {
+    color: #375D6C;
+    font-size: 60px;
+}
+
+.title button {
+    width: 258px;
+    height: 66px;
+    background-color: #F1CA7E;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+    color: #2D3639;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.sta {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.sta span {
+    color: #5A6B72;
+    font-size: 12px;
+}
+
+.sta p {
+    color: #E9AC35;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ye {
+    background-color: #F1F0EE;
+    width: 100%;
+}
+
+.year {
+    background-color: #F1F0EE;
+    width: 100%;
+    height: 197px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.year div {
+    width: 156px;
+    height: 69px;
+    margin: 20px;
+}
+
+.year h2 {
+    color: #375D6C;
+    font-size: 40px;
+
+}
+
+.year p {
+    font-size: 14px;
+    color: #2D3639;
+    font-weight: 100;
+    font-style: ;
+}
+
+footer .footer {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    
+}
+
+footer {
+    background-color: #2D3639;
+    width: 100%;
+    transform: translateY(-5px);
+}
+.cl{
+    width: 1px;
+    height: 1px;
+    background-color: #F1F0EE;
+    transform: scale(2.85) translateX(90px);
+    z-index: -10;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header .head {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    header .header {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #375D6C;
+    }
+
+    .header nav {
+        display: none;
+    }
+
+    header .menu span {
+        display: block;
+    }
+
+    main {
+        display: none;
+    }
+
+    .image {
+        text-align: end;
+    }
+
+    .image img {
+        width: 90%;
+        height: auto;
+    }
+
+    .mobile {
+        display: block;
+        height: auto;
+        height: 100%;
+        margin: 0%;
+        width: 100%;
+    }
+
+    .title {
+        height: 593px;
+        padding: 5%;
+        gap: 30px;
+        background-color: #FAFAF9;
+    }
+
+    .banner {
+        z-index: 10;
+        transform: translateY(-30%);
+        background-color: #FAFAF9;
+        padding: 10px;
+    }
+
+    .ye {
+        transform: translateY(25%) scale(1.05);
+        background-color: #F1F0EE;
+    }
+
+    .year {
+        background-color: #F1F0EE;
+        width: 100%;
+        height: 170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .year div{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer {
+        transform: translateY(-135%);
+        height: 150px;
+        display: flex;
+        align-items: center;
+    }
+
+
+}
