@@ -142,6 +142,10 @@ main .banner {
     width: 156px;
     height: 69px;
     margin: 20px;
+   
+}
+.the{
+    transform: translateX(160px);
 }
 
 .year h2 {
